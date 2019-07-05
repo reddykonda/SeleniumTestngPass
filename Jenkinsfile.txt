@@ -1,0 +1,10 @@
+node {
+    stage ('checkout'){
+        git 'https://github.com/reddykonda/SeleniumTestng.git'
+    }
+    stage('Mvn package'){
+        def mvnHome = tool name: 'maven_3_6_0', type: 'maven'
+        def mvnCMD = "${mvnHome}/bin/mvn"
+        sh "${mvnCMD} clean package"
+    }
+}
