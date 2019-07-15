@@ -1,6 +1,6 @@
 node {
     stage ('checkout'){
-        git 'https://github.com/reddykonda/SeleniumTestng.git'
+        git 'https://github.com/reddykonda/SeleniumTestngPass.git'
     }
     stage('Mvn package'){
         def mvnHome = tool name: 'maven_3_6_0', type: 'maven'
